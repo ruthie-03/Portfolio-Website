@@ -1,0 +1,125 @@
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('pexels-jeremy-bishop-1260133-15539377.jpg'); /* Set the background image */
+  background-size: cover;                  /* Scale the image to cover the entire element */
+  background-repeat: no-repeat;            /* Prevent the image from tiling */
+  background-position: center;             /* Center the image */
+}
+
+.password-container {
+  background-color: #FFFAFF;
+  width: 500px;
+  padding: 20px;
+  border-radius: 10px;
+  border: 5px solid #000333;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6),  /* Dark shadow for depth */
+                0 0 10px rgba(255, 255, 255, 0.3); /* Soft outer glow */
+  margin: 10px;
+  text-align: center;
+}
+
+.input-container {
+  border: solid 2px #ccc;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 24px;
+  letter-spacing: 4px;
+  flex-grow: 1;
+}
+
+.input::placeholder {
+  letter-spacing: 0px;
+}
+
+.fa-copy {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.fa-copy:hover {
+  opacity: 1;
+}
+
+.slider-container {
+  margin: 10px 0;
+  text-align: left;
+}
+
+.slider-container label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.slider-container input[type="range"] {
+  width: 100%;
+}
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.options label {
+  margin-right: 10px;
+}
+
+.btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px 0;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.strength {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.alert-container {
+  position: fixed;
+  width: 300px;
+  height: 50px;
+  background-color: paleturquoise;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  transition: 0.4s;
+}
+
+.active.alert-container {
+  right: -300px;
+}
