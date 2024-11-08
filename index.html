@@ -1,32 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8"> <!-- Defines the character encoding as UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures the page is responsive and fits the screen width -->
+    <title>Portfolio</title> <!-- The title of the webpage -->
+    <link rel="stylesheet" href="styles.css"> <!-- Links the external CSS file for styling -->
 </head>
-<body>
-    <div class="background-card">
-        <div class="card">
-            <div class="search">
-                <input type="text" placeholder="Enter city name" spellcheck="false">
-                <button><img src="search.png" alt="Search"></button>
-            </div>
-            <div class="error">
-                <p>Invalid city name</p>
-            </div> 
-            <div class="weather">
-                <!-- Container for dynamically added weather details -->
-                <div class="weather-details"></div>
-            </div>
-            <div class="forecast-slider">
-                <!-- Forecast items will be dynamically added here -->
-            </div>
-        </div>
+<div class="portfolio-container">
+<body class="light-theme"> <!-- Body tag with the default theme class set to 'light-theme' -->
+     <!-- Warning Message -->
+     <div id="warning-message">
+        <p>This website is designed to be displayed only in full screen on 15-24" displays with 1920px-1080px resolution - updates for other screens on the way!</p>
     </div>
-    <script src="script.js"></script>
+       
+    <!-- Cover Page Section -->
+     <!-- Main welcome heading -->
+    <div id="cover-page">
+        <span id="cover-text">    <span class="welcome-text">Welcome!  &nbsp;&nbsp;<u>&nbsp;&nbsp;&nbsp;&nbsp;CREATE<span></u> </span>
+            <div>
+                <!-- Use classes 2,3,4, or 5 to match the number of words -->
+                <ul class="flip5"><i>
+                    <li> &~Imagine</li>
+                    <li> &~Dream</li>
+                    <li> &~Inspire</li>
+                    <li> &~Innovate</li>
+                    <li> &~Discover</li>
+                </i></ul>
+            </div></span> 
+        
+        
+        <button id="enter-button">Enter</button> <!-- Button to enter the main content -->
+        
+        <!-- Theme toggle button for the cover page -->
+        <button id="theme-toggle-cover" aria-label="Toggle theme"> 
+            <img src="icons8-toggle-button-64.png" class="icon-light" alt="Light Mode Icon"> <!-- Light mode icon -->
+            <img src="icons8-toggle-button-66.png" class="icon-dark" alt="Dark Mode Icon"> <!-- Dark mode icon -->
+        </button>
+        
+
+        <!-- Quote container, likely dynamic text inserted with JavaScript -->
+        <div id="quote-container"> 
+            <p id="quote-text"></p> <!-- Placeholder for a quote, probably populated with JS -->
+        </div> 
+    </div>
+
+    <!-- Main Content starts after entering -->
+    <div id="main-content">
+
+        <!-- Navigation Bar -->
+        <nav>
+            <!-- Another theme toggle for the main section -->
+            <button id="theme-toggle-main" aria-label="Toggle theme">
+                <img src="icons8-toggle-button-64.png" class="icon-light" alt="Light Mode Icon">
+                <img src="icons8-toggle-button-66.png" class="icon-dark" alt="Dark Mode Icon">
+            </button>
+            <span class="custom_logo"><img src="ri logo w.png" class="customlogo" alt="R.innovation Logo"></span>
+            
+            <!-- Navigation menu linking to different sections -->
+            <div class="nav-menu" id="nav-menu">
+                <a href="#section1">Homepage</a>
+                <a href="#section2">About</a>
+                <a href="#section3">Skills</a>
+                <a href="#section4">Projects</a>
+                <a href="#section5">Contact</a>
+            </div>
+        </nav>
+
+        <!-- Home Section -->
+        <section id="section1">
+            <div class="content-box">
+                <div class="home-content">
+                    <!-- Image of the homepage -->
+                    <div class="home-content-image-box">
+                        <img src="Designer(9).jpeg" alt="Description of the image"> <!-- Be sure to add a meaningful alt description -->
+                    </div>
+                    <div class="home-text-parent-container">
+                        <div class="home-right-aligned-text">
+
+      <span class="title-word title-word-1" id="home-name-text">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ruth English<br></span>
+      <span class="title-word title-word-2">I'm </span>
+      <span class="title-word title-word-3">passionate about </span>
+      <span class="title-word title-word-4">software development</span>
+
+  </div>
+                  <!-- Icon links container -->
+                  <div class="icon-links">
+                    <a href="https://github.com/ruthie-03" target="_blank">
+                        <img src="github.png" alt="GitHub Icon">
+                    </a>
+                    <a href="http://linkedin.com/in/ruth-e-667607325" target="_blank">
+                        <img src="linkedin2.png" alt="LinkedIn Icon">
+                    </a>
+                    <div class="cv-button">
+                        <a href="CVpdf/3-1-Ruth English Software Dev CV Version 0910.pdf" download="RE-CV.pdf">
+                            <button type="button">Download CV</button>
+                        </a>
+                        </div>
+                    </div>
+
+  
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="section2">
+            <div class="content-box">
+                <p id="about-text">
+                    I’m just about to complete the intense and rewarding Software Development Bootcamp with JustIT.  I can’t wait to dive into the tech world.  Coding has been a journey of discovery and creativity for me — I can't wait to transform my ideas into reality.
+                    Whether it’s building dynamic web apps, automating solutions, or collaborating on creative projects, I’m all about crafting innovative results.<br><br>
+                    With my background in science, sales, and hands-on teamwork, I bring a unique mix of analytical thinking, adaptability, and a broad perspective to everything I do.  I thrive in collaborative environments and am passionate about using tech to create meaningful, impactful work.  I'm always open to new challenges, conversations, or brainstorming sessions — so if you have an idea for one, let’s connect and make something amazing happen!</p>
+
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="section3">
+            <div class="content-box">
+          
+                <div class="skills-icon-container">
+                    <!-- Icons representing different skills -->
+                    <div class="icon-item">
+                        <img src="html5.png" alt="HTML 5">
+                        <p>HTML 5</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="css.png" alt="CSS 3">
+                        <p>CSS 3</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="js.png" alt="JavaScript">
+                        <p>JavaScript</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="json-file(1).png" alt="JSON">
+                        <p>JSON</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="python.png" alt="Python">
+                        <p>Python</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="mysql.png" alt="MySQL">
+                        <p>MySQL</p>
+                    </div>
+                    <div class="icon-item">
+                        <img src="windows.png" alt="VS Code">
+                        <p>VS Code</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section with carousel slider -->
+        <section id="section4">
+            <div class="content-box">
+                <div class="carousel-container">
+                    <!-- Arrows for navigating the carousel -->
+                    <button class="carousel-arrow left-arrow" onclick="scrollCarousel(-1)">&#10094;</button>
+                    
+                    <!-- Carousel wrapper to display projects -->
+                    <div class="carousel-wrapper">
+                        <div class="carousel">
+                            <!-- Each project card -->
+                            <div class="carousel-card">
+                                <a href="Project1-Calculator/index.html" target="_blank">
+                                <img src="P1.png" alt="Project 1" class="project-image">
+                                </a>
+                                <div class="project-description">
+                                    <a href="Project1-Calculator/index.html" target="_blank" class="project-description-link">CSS Grid Calculator</a>
+                                </div>
+                            </div>
+                            <!-- Repeat similar structure for other projects -->
+                            <div class="carousel-card">
+                                <a href="Project2-Weather App/P2WEATHERAPP/index.html" target="_blank">
+                                <img src="P2.png" alt="Project 2" class="project-image">
+                                </a>
+                                <div class="project-description">
+                                    <a href="Project2-Weather App/P2WEATHERAPP/index.html" target="_blank" class="project-description-link">Weather App</a>
+                                </div>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="Project3-Currency Converter/index.html" target="_blank">
+                                <img src="P3.png" alt="Project 3" class="project-image">
+                                </a>
+                                <div class="project-description">
+                                    <a href="Project3-Currency Converter/index.html" target="_blank" class="project-description-link">Currency Converter</a>
+                                </div>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="Project4-Random Password Generator/index.html" target="_blank" >
+                                <img src="P4.png" alt="Project 4" class="project-image">
+                                </a>
+                                <div class="project-description">
+                                    <a href="Project4-Random Password Generator/index.html" target="_blank" class="project-description-link">Random Password Generator</a>
+                                </div>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="Project5-Personal Finance Tracker/index.html" target="_blank">
+                                <img src="P5.png" alt="Project 5" class="project-image">
+                                </a>
+                                <div class="project-description">
+                                    <a href="Project5-Personal Finance Tracker/index.html" target="_blank" class="project-description-link">
+                                    Personal Finance Tracker
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-card">
+                                <a href="P6ADVMADLIBS/trinketADVML.html" target="_blank">
+                                <img src="UnderConstruction.jpg" alt="Project 6" class="project-image">
+                                </a>
+                                <div class="project-description"><a href="P6ADVMADLIBS/trinketADVML.html" target="_blank" class="project-description-link">
+                                    Mad Libs Adventure Story</a>
+                                
+                                </div>
+                            </div>
+                            <div class="carousel-card">
+                                <img src="UnderConstruction.jpg" alt="Project 7" class="project-image">
+                                <div class="project-description">
+                                    Coming soon!
+                                </div>
+                            </div>
+                            <!-- Continue for more projects... -->
+                        </div>
+                    </div>
+                    <!-- Right arrow to scroll the carousel -->
+                    <button class="carousel-arrow right-arrow" onclick="scrollCarousel(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="section5">
+            <div class="content-box">
+                <div class="contact-content">
+                    <div class="contact-content-image-box">
+                        <img src="Designer(11).jpeg" alt="Description of the image"> <!-- Again, consider a meaningful alt text -->
+                    </div>
+                    <div class="contact-text-parent-container">
+                        <div class="contact-left-aligned-text">
+                            <p><span class="title-word title-word-4">Let's work together!</span></p><br><br>
+                        </div>
+                        <div class="contact-flex-column">
+                            <!-- Contact icons linking to GitHub, LinkedIn, and CV -->
+                            <a href="https://github.com/ruthie-03" class="icon" target="_blank">
+                                <img src="github.png" alt="GitHub Icon" class="icon-image">
+                            </a>
+                            <a href="https://www.linkedin.com/in/ruth-e-667607325" class="icon" target="_blank">
+                                <img src="linkedin2.png" alt="LinkedIn Icon" class="icon-image">
+                            </a>
+                            <!-- Button to download CV -->
+                             <div class="cv-button">
+                            <a href="CVpdf/3-1-Ruth English Software Dev CV Version 0910.pdf" download="RE-CV.pdf">
+                                <button type="button">Download CV</button>
+                            </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+    <!-- Link to JavaScript file -->
+    <script src="script.js"></script> 
 </body>
+
 </html>
