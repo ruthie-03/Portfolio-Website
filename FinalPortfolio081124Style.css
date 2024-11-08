@@ -1,0 +1,1057 @@
+/* -----Cover Page Styles----- */
+
+#warning-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 0, 0, 0.7);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    z-index: 100000;  /* Ensures the warning appears on top */
+    display: none; /* Initially hidden */
+}
+
+/* Show the warning message if the screen size or window size is smaller than 1536px x 864px */
+
+/* If screen width or height is smaller than 1536px x 864px */
+@media screen and (max-width: 1535px),  /* If screen width is smaller than 1536px */
+       screen and (max-height: 702px) { /* If screen height is smaller than 864px */
+    #warning-message {
+        display: block;  /* Show the warning message */
+    }
+
+    /* Hide main content and cover page */
+    #main-content, #cover-page {
+        display: none;
+    }
+}
+
+/* Hide warning message when the screen size is 1536px x 864px or larger */
+@media screen and (min-width: 1536px),  /* If screen width is larger than or equal to 1536px */
+       screen and (min-height: 703px) { /* If screen height is larger than or equal to 864px */
+    #warning-message {
+        display: none;  /* Hide the warning message */
+    }
+
+    /* Show main content and cover page */
+    #main-content, #cover-page {
+        display: block;
+    }
+}
+
+
+#cover-page {
+    opacity: 1; /* Ensure full opacity */
+} 
+
+#cover-page,
+#main-content {
+    background: inherit; /* Inherit background color from parent element */
+    opacity: 1;
+}
+
+/* Cover Page Background Gradient*/
+#cover-page {
+    background: linear-gradient(135deg, var(--color1), var(--color2), var(--color3));
+    opacity: 1;
+    position: fixed; /* Fix position to the viewport */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width of the viewport */
+    height: 100%; /* Full height of the viewport */
+    background: inherit; /* Inherit background color from parent */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    transition: transform 1s ease; /* Smooth transition for transform changes */
+    z-index: 9001; /* Stack above other content */
+}
+
+/* Cover Theme Toggle Button */
+#theme-toggle-cover {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    top: 1rem; /* Position from the top */
+    left: 1rem; /* Position from the left */
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    background-color: transparent; /* Make background transparent */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    padding: 0; /* Remove padding */
+}
+
+/* Cover Enter button*/
+#enter-button {
+    position: absolute; /* Position relative to the nearest positioned ancestor */
+    bottom: 4rem; /* Position from the bottom */
+    right: 1rem; /* Position from the right */
+    left: 50%; /* Align to the center */
+    transform: translateX(-50%); /* Center the button horizontally */
+    padding: 0.625rem 1.25rem; /* Set padding around the button */
+    font-size: 1rem; /* Set font size */
+}
+
+/* Cover Page Transition */
+#cover-page.hidden {
+    transform: translateY(-100%); /* Move the cover page off-screen when hidden */
+    opacity: 1;
+}
+
+/* Cover Text Styles for Both Light and Dark Themes */
+#cover-text {
+    font-size: 5.625rem;
+    font-weight: 100;
+    color: var(--color-text);
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 10.156rem;
+        padding-top: 1.5rem;
+        margin-top: -0.625rem;
+        li {
+            font-family: Serif;
+            color: var(--color-text);
+            font-weight: 500;
+            padding: 0 0.625rem;
+            height: 7.031rem;
+            margin-bottom: 6.75rem;
+            display: block;
+        }
+    }
+}
+
+/* Currently set to normal - ready to be adapted if you want to change this later*/
+#cover-text2 {
+    font-size: 5.625rem;
+    font-weight: 100;
+    color: var(--color-text);
+    div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 10.156rem;
+        padding-top: 1.5rem;
+        margin-top: -0.625rem;
+        li {
+            font-family: Serif;
+            color: var(--color-text);
+            font-weight: 500;
+            padding: 0 0.625rem;
+            height: 7.031rem;
+            margin-bottom: 6.75rem;
+            display: block;
+        }
+    }
+}
+
+#cover-text .html {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#cover-text .body {
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: inherit; 
+    &::after {
+        content:"";
+        display: block;
+        width: 110%;
+        height: 125vh;
+        background: radial-gradient(#222, #000);
+        position: absolute;
+        z-index: -1;
+        transform: rotate(20deg);
+        border-radius: 50%;
+    }
+}
+
+/* Quote Container Styles */
+#quote-container {
+    position: fixed; /* Fix position to the viewport */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width of the viewport */
+    background-color: inherit; /* Inherit background color from parent */
+    color: inherit; /* Inherit text color from parent */
+    text-align: right; /* Align text to the right */
+    padding: 1rem; /* Set padding around the container */
+    overflow: hidden; /* Hide overflow content */
+    z-index: 2002; /* Stack above other content */
+    opacity: 1;
+}
+
+/* Typing and Moving Effect */
+#quote-text {
+    display: inline-block; /* Allow the element to be inline with block properties */
+    white-space: nowrap; /* Prevent text from wrapping to the next line */
+    animation: move 20s linear infinite, colorChange 7s linear infinite; /* Apply move and color change animations */
+    font-size: 1.5rem; /* Set font size (adjust size as needed) */
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; /* Set the font family */
+}
+
+/* Quotes moving accross screen */
+@keyframes move {
+    from {
+        transform: translateX(100vw); /* Start off-screen to the right */
+    }
+    to {
+        transform: translateX(-100vw); /* Move off-screen to the left */
+    }
+}
+
+/* Keyframes for Color Change Animation */
+@keyframes colorChange {
+    0% {
+        color: red; /* Initial color */
+    }
+    14% {
+        color: orange; /* Transition to orange */
+    }
+    28% {
+        color: yellow; /* Transition to yellow */
+    }
+    42% {
+        color: green; /* Transition to green */
+    }
+    57% {
+        color: blue; /* Transition to blue */
+    }
+    71% {
+        color: indigo; /* Transition to indigo */
+    }
+    85% {
+        color: violet; /* Transition to violet */
+    }
+    100% {
+        color: red; /* Reset to initial color */
+    }
+}
+
+/* ----Nav Menu Styles Part 1-----*/
+
+/* Navigation Styles */
+nav {
+    position: fixed; /* Fixed position for the navigation bar */
+    top: 0; /* Align to the top */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Adjust to center position */
+    width: 75%; /* Set width of the navigation bar */
+    background: var(--nav-color); /* Background color for the navigation bar */
+    transition: background-color 0.5s ease; /* Smooth transition for background color changes */
+    z-index: 120000; /* Set stacking order */
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Align items vertically in the center */
+    height: 3.75rem; /* Height of the navigation bar */
+    padding: 0 1rem; /* Horizontal padding */
+    backdrop-filter: blur(0.5rem); /* Apply the blur effect */
+}
+
+nav::before {
+    content: ''; /* Required for the pseudo-element */
+    position: absolute; /* Position relative to the fixed nav */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-primary); /* Background from your CSS variable */
+    opacity: 0.5; /* Set the transparency for the background */
+    z-index: -1; /* Ensure it stays behind the content */
+    pointer-events: none; /* Allow interaction with nav content */
+}
+
+nav .nav-menu {
+    display: flex; /* Use flexbox layout for navigation menu */
+    justify-content: flex-end; /* Align links to the right */
+    gap: 1rem; /* Space between navigation links */
+    width: 33%; /* Full width of the navigation menu */
+}
+
+nav button {
+    background: none; /* No background for button */
+    border: none; /* No border for button */
+    color: var(--color-navtext); /* Text color for button */
+    font-size: 1.0625rem; /* Font size for button text */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: "Signika Negative", sans-serif; /* Set font family for button */
+}
+
+nav a {
+    color: var(--color-navtext); /* Text color for navigation links */
+    transition: background-color 0.5s ease; /* Smooth transition for background color on hover */
+    text-align: center; /* Center text alignment */
+    padding: 0.875rem 1.25rem; /* Padding for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1.0625rem; /* Font size for navigation links */
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;/* Set font family for links */
+    background-color: var(--color-primary);
+    border-radius: 3px;
+}
+
+nav a:hover {
+    background-color: #ddd; /* Background color change on hover */
+    color: black; /* Text color change on hover */
+}
+
+
+/* -----Portfolio Body-----*/
+
+/* Enable smooth scrolling for anchor links */
+* {
+    scroll-behavior: smooth; 
+} 
+
+/* Alternative font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;*/
+
+/*Font import*/
+@import url("https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap"); 
+
+/*General font styles*/
+body {
+    font-family: "Signika Negative", sans-serif; /*Font family*/
+    font-weight: 400; /*General font weight*/
+  }
+  
+/* Root Variables for Light and Dark Modes */
+:root {
+    /* Light Mode Colors */
+    --color1: #91B6DB; /*Background gradient colour 1*/
+    --color2: #91b6db1d; /*Background gradient colour 2*/
+    --color3: #91B6DB; /*Background gradient colour 3*/
+    --nav-color: rgba(253, 253, 253, 0.5); /*Nav menu background colour with reduced opacity*/
+    --color-primary: #FDFDFD; /* Primary color used in light mode */
+    --color-secondary: #FDFDFD; /* Secondary background color for light mode */
+    --color-accent: #307578; /* Accent color for elements in light mode */
+    --color-background: #3496BD; /*#7FB6CC; Main background color for light mode */
+    --color-text: #000003; /* Primary text color for light mode */
+    --color-navtext: #000003; /* Navigation text color for light mode */
+}
+
+body.dark-theme {
+    /* Dark Mode Colors */
+    --color1: #0a0d27;  /*#0D0F21;*/ /*Background gradient colour 1*/
+    --color2: #000003;/*#0d0f219f;*/ /*Background gradient colour 2*/
+    --color3: #0a0d27;/*#161937; #050b34 +; #161937*/ /*Background gradient colour 3*/
+    --nav-color: rgba(0, 0, 0, 0.5); /*Nav menu background colour with reduced opacity*/
+    --color-primary: black; /* Primary color used in dark mode */
+    --color-secondary: black; /* Secondary background color for dark mode */
+    --color-accent: #307578; /* Accent color for elements in dark mode */
+    --color-background: #0D0F21; /* Main background color for dark mode */
+    --color-text: #FDFDFD; /* Primary text color for dark mode */
+    --color-navtext: #FDFDFD; /* Navigation text color for dark mode */
+}
+
+/* Light and Dark Theme Styles */
+body {
+    background: var(--color-background);  /* Set the background color based on theme */
+    color: var(--color-text); /* Set the text color based on theme */
+    transition: background-color 0.5s ease, color 0.5s ease; /* Smooth transition for background and text color changes */
+}
+
+body {
+    margin: 0; /* Remove default margin */
+    height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, var(--color1), var(--color2), var(--color3));
+    background-attachment: fixed; /* Optional for parallax effect */
+    display: flex; /* Enable flexbox for content */
+    flex-direction: column; /* Stack sections vertically */
+}
+
+/* Light/Dark theme toggle icon styles*/
+/* Hide dark theme toggle icon by default */
+.icon-dark {
+    display: none; /* Hide the dark theme icon in light theme */
+}
+
+/* Show the appropriate icon based on the theme */
+body.light-theme .icon-light {
+    display: inline; /* Show the light theme icon in light theme */
+}
+
+body.light-theme .icon-dark {
+    display: none; /* Hide the dark theme icon in light theme */
+}
+
+body.dark-theme .icon-light {
+    display: none; /* Hide the light theme icon in dark theme */
+}
+
+body.dark-theme .icon-dark {
+    display: inline; /* Show the dark theme icon in dark theme */
+}
+
+.icon-light,
+.icon-dark {
+    width: 32px; /* Width of the icon */
+    height: 30px; /* Height of the icon */
+    background-color: transparent; /* Make the icon background transparent */
+}
+
+
+
+/* Reset Styles */
+* {
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    box-sizing: border-box; /* Use border-box for box sizing */
+}
+
+/* Custom logo */
+
+.customlogo {
+    width: 100px; /* Width of the logo */
+    height: auto; /* Maintain aspect ratio */
+    position: relative;
+    left: -300px; /* Your specific positioning */
+    border-radius: 3px;
+    border: solid 2px black;
+    outline: 2px solid darkcyan;      /* Outer border color */
+}
+
+/*body*/
+body,
+html {
+    margin: 0; /* Reset margin for body and html */
+    padding: 0; /* Reset padding for body and html */
+    height: 100%; /* Full height for body and html */
+    width: 100%; /* Full width for body and html */
+    font-family: "Signika Negative", sans-serif; /* Set font family */
+}
+
+/* Sliding Transition Effect */
+body::before {
+    content: ''; /* Pseudo-element for sliding effect */
+    position: fixed; /* Fixed position for sliding element */
+    top: 0; /* Align to the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: var(--color-background); /* Background color for sliding element */
+    z-index: 9999; /* Set stacking order */
+    transform: translateX(-100%); /* Off-screen to the left */
+    transition: transform 0.5s ease; /* Smooth transition for sliding effect */
+}
+
+body.transitioning::before {
+    transform: translateX(0); /* Slide into view when transitioning */
+}
+
+/* Sections - General Styles */
+section {
+    display: flex; /* Use flexbox for section layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    font-weight: none; /* Make font bold */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+    height: 100vh; /* Full height of the viewport */
+    flex-direction: column; /* Stack content vertically */
+}
+
+/* Content Boxes - General Styles */
+.content-box {
+    background-color: var(--color-secondary); /* Background color for content box */
+    opacity: 1.0; /* Full opacity */
+    color: var(--color-text); /* Text color for content */
+    padding: 1.25rem; /* Padding inside the content box (20px converted to rem) */
+    border-radius: 0; /* No border radius */
+    width: 75%; /* Set width of the content box */
+    height: 100%; /* Full height of the parent */
+    box-sizing: border-box; /* Include padding in width and height calculations */
+    text-align: center; /* Center text inside the box */
+    display: flex; /* Use flexbox for layout inside the content box */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    position: relative; /* Position relative for pseudo-elements */
+    z-index: 1; /* Ensure content is above the bevel */
+}
+
+
+/* Rounded bevel effect on left and right sides of content boxes */
+.content-box::before,
+.content-box::after {
+    content: ''; /* Create a pseudo-element for decorative purposes */
+    position: absolute; /* Position absolutely within the content box */
+    top: 0; /* Align to the top */
+    bottom: 0; /* Align to the bottom */
+    width: 5px; /* Width of the bevel (adjust if necessary) */
+    background-color: var(--color-secondary); /* Match the color of the content box */
+    z-index: -1; /* Ensure the bevel is behind the content */
+}
+
+/* Left side bevel (without top and bottom rounding) */
+.content-box::before {
+    left: -5px; /* Position pseudo-element to the left */
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.2), var(--color-secondary)); /* Gradient for outer left rounded bevel */
+    border-radius: 0px 0 0px 0px; /* No rounding at top or bottom */
+}
+
+/* Right side bevel (without top and bottom rounding) */
+.content-box::after {
+    right: -5px; /* Position pseudo-element to the right */
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.2), var(--color-secondary)); /* Gradient for outer right rounded bevel */
+    border-radius: 0 0px 0px 0; /* No rounding at top or bottom */
+}
+
+
+/* Section General Font Family Styles */
+#section1,
+#section2,
+#section3,
+#section4,
+#section5 {
+    font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif; /* Set font family for sections */
+}
+
+
+
+#main-content {
+    display: none; /* Hide main content by default */
+    opacity: 1; /* Set initial opacity to 0 */
+    transition: opacity 1s ease-in; /* Smooth transition for opacity changes */
+}
+
+#main-content.visible {
+    display: block; /* Show main content when visible */
+    opacity: 1; /* Set opacity to 1 when visible */
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip5 { animation: flip5 12s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -450px; }  /* Adjusted from -180px to -450px (2.5x) */
+    5% { margin-top: -225px; }   /* Adjusted from -90px to -225px (2.5x) */
+    50% { margin-top: -225px; }  /* Adjusted from -90px to -225px (2.5x) */
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -450px; } /* Adjusted from -180px to -450px (2.5x) */
+}
+
+@keyframes flip3 {
+    0% { margin-top: -675px; }  /* Adjusted from -270px to -675px (2.5x) */
+    5% { margin-top: -450px; }   /* Adjusted from -180px to -450px (2.5x) */
+    33% { margin-top: -450px; }  /* Adjusted from -180px to -450px (2.5x) */
+    38% { margin-top: -225px; }   /* Adjusted from -90px to -225px (2.5x) */
+    66% { margin-top: -225px; }   /* Adjusted from -90px to -225px (2.5x) */
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -675px; }  /* Adjusted from -270px to -675px (2.5x) */
+}
+
+@keyframes flip4 {
+    0% { margin-top: -900px; }  /* Adjusted from -360px to -900px (2.5x) */
+    5% { margin-top: -675px; }    /* Adjusted from -270px to -675px (2.5x) */
+    25% { margin-top: -675px; }   /* Adjusted from -270px to -675px (2.5x) */
+    30% { margin-top: -450px; }   /* Adjusted from -180px to -450px (2.5x) */
+    50% { margin-top: -450px; }   /* Adjusted from -180px to -450px (2.5x) */
+    55% { margin-top: -225px; }    /* Adjusted from -90px to -225px (2.5x) */
+    75% { margin-top: -225px; }    /* Adjusted from -90px to -225px (2.5x) */
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -900px; }  /* Adjusted from -360px to -900px (2.5x) */
+}
+
+@keyframes flip5 {
+    0% { margin-top: -1125px; }   /* Adjusted from -450px to -1125px (2.5x) */
+    5% { margin-top: -900px; }    /* Adjusted from -360px to -900px (2.5x) */
+    20% { margin-top: -900px; }   /* Adjusted from -360px to -900px (2.5x) */
+    25% { margin-top: -675px; }     /* Adjusted from -270px to -675px (2.5x) */
+    40% { margin-top: -675px; }     /* Adjusted from -270px to -675px (2.5x) */
+    45% { margin-top: -450px; }     /* Adjusted from -180px to -450px (2.5x) */
+    60% { margin-top: -450px; }     /* Adjusted from -180px to -450px (2.5x) */
+    65% { margin-top: -225px; }     /* Adjusted from -90px to -225px (2.5x) */
+    80% { margin-top: -225px; }     /* Adjusted from -90px to -225px (2.5x) */
+    85% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -1125px; }   /* Adjusted from -450px to -1125px (2.5x) */
+}
+
+
+/* -----Section 1 Styles----- */
+
+/* Homepage Content Styles */
+#section1 .content-box {
+    position: relative; /* Allows absolute positioning of children */
+}
+
+/* Image box inside content-box for section1 only */
+#section1 .home-content-image-box {
+    position: absolute; /* Allows positioning within the content box */
+    top: 8rem; /* Adjust to desired distance from the top */
+    left: 5rem; /* Adjust to desired distance from the left */
+    z-index: 1; /* Ensure it appears above other content if needed */
+    width: 30%; /* Ensure it doesn’t overflow */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+
+/* Image styles within the home-content-image-box */
+#section1 .home-content-image-box img {
+    width: 80%; /* Make image fill the box */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+    max-height: 100%; /* Prevent overflow */
+    border-radius: 15px; /* Optional: Rounds corners of the image */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/*3d shadow effect?*/
+
+/* Default shadow for light mode */
+body.light-theme #section1 .home-content-image-box img {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.65), /* Main shadow */
+                0 12px 30px rgba(0, 0, 0, 0.4); /* Soft shadow */
+}
+
+/* Shadow for dark mode */
+body.dark-theme #section1 .home-content-image-box img {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1), /* Main shadow */
+                0 8px 20px rgba(255, 255, 255, 0.1); /* Soft shadow */
+}
+
+/* Apply 3D rotation on hover */
+/* Hover effect for the image */
+#section1 .home-content-image-box img:hover {
+    transform: rotateY(5deg) rotateX(5deg); /* Rotate wrapper for 3D effect */
+}
+
+/* Text container within section1 */
+.home-text-parent-container {
+    position: absolute; /* Allows positioning within the content box */
+    top: 10rem; /* Adjust to desired distance from the top */
+    left: 32rem; /* Adjust to desired distance from the left */
+    z-index: 1; /* Ensure it appears above other content if needed */
+    width: 45%; /* Ensure it doesn’t overflow */
+    height: auto; /* Keep the aspect ratio */
+    text-align: right;
+}
+
+/* Right aligned text within the parent container */
+
+.home-right-aligned-text {
+    width: 100%; /* Allow text to fill the box */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent overflow */
+    max-height: 100%; /* Prevent overflow */
+    text-align: right;
+    font-size: 70px;
+    margin-top: -40px
+}
+
+#home-name-text {
+    font-weight: 670;
+    font-size: 34px;
+    text-decoration: underline;
+    text-align: right;
+}
+
+/*Home Icons*/
+.icon-links {
+    margin-top: 70px; /* Space between text and icons */
+    display: flex;
+    justify-content: flex-end; /* Aligns the icons to the right */
+    gap: 40px; /* Space between the icons */
+}
+
+.icon-links a img {
+    width: 40px; /* Adjust the icon size */
+    height: 40px;
+}
+/* Style for the button */
+.contact-button button {
+    padding: 10px 20px; /* Add padding inside the button */
+    background-color: #007BFF; /* Set button background color */
+    color: white; /* Set text color for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Round corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Set font size for button text */
+}
+
+/* Button hover effect */
+.contact-button button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+}
+
+/**/
+.title-word {
+    animation: color-animation 4s linear infinite;
+  }
+  
+  .title-word-1 {
+    --color-1: var(--color-text);
+    --color-2: var(--color-accent);
+    --color-3: var(--color-text);
+  }
+  
+  .title-word-2 {
+    --color-1: var(--color-text);
+    --color-2: var(--color-text);
+    --color-3: var(--color-text);
+  }
+  
+  .title-word-3 {
+    --color-1: var(--color-accent);
+    --color-2: var(--color-text);
+    --color-3: var(--color-accent);
+  }
+  
+  .title-word-4 {
+    --color-1: var(--color-text);
+    --color-2: var(--color-accent);
+    --color-3: var(--color-text);
+  }
+  
+  @keyframes color-animation {
+    0%    {color: var(--color-1)}
+    32%   {color: var(--color-1)}
+    33%   {color: var(--color-2)}
+    65%   {color: var(--color-2)}
+    66%   {color: var(--color-3)}
+    99%   {color: var(--color-3)}
+    100%  {color: var(--color-1)}
+  }
+  
+  /* Here are just some visual styles. 🖌 */
+  
+  .home-colour-text-container{
+    display: grid;
+    place-items: right;  
+    text-align: right;
+    height: 100vh
+  }
+  
+  .title {
+    font-family: "Signika Negative", sans-serif;
+    font-weight: 800;
+    font-size: 8.5vw;
+    text-transform: uppercase;
+    text-align: right;
+  }
+
+
+/* -----Section 2 Styles-----*/
+
+
+#about-text {
+    font-weight: var(--font-weight); /* Uses the variable */
+    font-size: 1.225rem;;
+    line-height: 1.6; /* Increases line spacing for paragraph text */
+
+    font-style: none;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+
+/* -----Section 3 Styles----- */
+
+/* Skills Icon Container */
+.skills-icon-container {
+    display: flex; /* Enable flexbox for layout */
+    justify-content: space-around; /* Evenly distribute icons across the container */
+    align-items: center; /* Align icons vertically within the container */
+    flex-wrap: wrap; /* Allow wrapping of icons on smaller screens */
+    width: 80%; /* Set the width of the container to 80% of its parent */
+    max-width: 1000px; /* Set a maximum width for the container */
+    gap: 20px; /* Space between each icon */
+    font-weight: var(--font-weight); /* Uses the variable */
+}
+
+/* Styling for the individual icons */
+.skills-icon-container img {
+    width: 120px; /* Set a fixed width for the icons */
+    height: 120px; /* Set a fixed height for the icons */
+    object-fit: contain; /* Maintain aspect ratio of icons */
+    transition: transform 0.2s ease-in-out; /* Smooth transition for the hover effect */
+    
+}
+
+/* Add a hover effect to the icons */
+.skills-icon-container img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Container for Skills Section */
+#section3 .content-box {
+    display: flex; /* Enable flexbox for layout */
+    flex-direction: column; /* Stack child elements (heading, icons, text) vertically */
+    align-items: center; /* Horizontally center all content in the container */
+}
+
+/* Style the heading (Skills) */
+#section3 .content-box h2 {
+    margin-bottom: 40px; /* Add space below the heading */
+}
+
+/* Flexbox for the icons and their labels */
+.skills-icon-container {
+    display: flex; /* Enable flexbox for layout */
+    justify-content: center; /* Center icons horizontally within the container */
+    align-items: center; /* Align icons vertically */
+    flex-wrap: wrap; /* Allow icons to wrap on smaller screens */
+    gap: 60px; /* Space between icons */
+}
+
+/* Each icon and its label */
+.icon-item {
+    display: flex; /* Enable flexbox for layout */
+    flex-direction: column; /* Stack the icon and text vertically */
+    align-items: center; /* Center align both icon and text */
+    text-align: center; /* Center text for labels */
+}
+
+/* Optional hover effect for icons */
+.skills-icon-container img {
+    transition: transform 0.2s ease-in-out; /* Smooth transition for hover effect */
+}
+
+.skills-icon-container img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+/* Optional: style for the small phrases/labels */
+.icon-item p {
+    margin-top: 10px; /* Add space between the icon and its text */
+    font-size: 18px; /* Set the text size for labels */
+    color: var(--color-text); /* Set color for the text */
+}
+
+/* -----Section 4 Styles----- */
+/* Project carousel */
+/* Carousel container and general styling */
+.carousel-container {
+    position: relative; /* Position relative to allow absolute positioning of arrows */
+    width: 80%; /* Set width of the carousel container to 80% */
+    margin: auto; /* Center the carousel container */
+    display: flex; /* Enable flexbox for layout */
+    align-items: center; /* Center align items vertically */
+    justify-content: center; /* Center align items horizontally */
+}
+
+/* Carousel wrapper: hides overflow (scrollable content) */
+.carousel-wrapper {
+    width: 100%; /* Full width of the container */
+    overflow: hidden; /* Hide overflow content (if any) */
+}
+
+/* Carousel: flexible container for the cards */
+.carousel {
+    display: flex; /* Enable flexbox for carousel items */
+    transition: transform 0.4s ease; /* Smooth transition effect for carousel movement */
+}
+
+/* Carousel card styles */
+.carousel-card {
+    flex: 0 0 30%; /* Each card takes ~30% of the width, showing 3 cards at a time */
+    margin: 0 10px; /* Add spacing between carousel cards */
+    background-color: white; /* Background color for cards */
+    border-radius: 15px; /* Rounded corners for cards */
+    overflow: hidden; /* Hide overflow content for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+    display: flex; /* Enable flexbox for card content */
+    flex-direction: column; /* Stack card content vertically */
+    max-width: 22%;
+}
+
+/* Project image styles */
+.project-image {
+    width: 100%; /* Image fills the card width */
+    height: 200px; /* Fixed height for project images */
+    object-fit: cover; /* Cover the entire area while maintaining aspect ratio */
+    border-bottom: 2px solid #f0f0f0; /* Subtle separation between image and description */
+}
+
+/* Project description styles */
+.project-description {
+    padding: 20px; /* Padding inside the description area */
+    text-align: center; /* Center align project description text */
+    color: #06124E;
+    font-weight: var(--font-weight); /* Uses the variable */
+}
+
+/* Remove colour change and underline from text links */
+.project-description-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Arrow button styles */
+.carousel-arrow {
+    background-color: var(--color-primary); /* Background color for arrow buttons */
+    color:  var(--color-text); /* Text color for arrow buttons */
+    border: none; /* Remove default border */
+    padding: 15px; /* Padding inside the button */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: absolute; /* Absolute positioning for placement */
+    top: 50%; /* Center vertically within the container */
+    transform: translateY(-50%); /* Adjust to perfectly center the button */
+    font-size: 24px; /* Font size for arrow symbols */
+    z-index: 10; /* Ensure the arrow is above other elements */
+    border-radius: 50%; /* Rounded button shape */
+}
+
+/* Position arrows outside the carousel */
+.left-arrow {
+    left: -50px; /* Position the left arrow outside the container */
+}
+
+.right-arrow {
+    right: -50px; /* Position the right arrow outside the container */
+}
+
+/* Arrow button hover effect */
+.carousel-arrow:hover {
+    background-color: var(--color-primary); /* Darken background on hover */
+}
+
+/* -----Section 5 Styles----- */
+/* Contact Section Styles */
+.Contact {
+    text-align: left; /* Align text to the left */
+    margin: 0.3125rem; /* Set margin around the contact section (5px converted to rem) */
+}
+
+.contact-link {
+    text-decoration: none; /* Remove underline from links */
+    color: var(--color-text); /* Set link color using variable */
+}
+
+.contact-link:hover {
+    color: whitesmoke; /* Change link color on hover */
+}
+
+.Contact-flex-container {
+    display: flex; /* Use flexbox layout */
+    justify-content: space-between; /* Space items evenly with space between */
+    align-items: center; /* Center items vertically */
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+/* Contact content */
+#section5 .content-box {
+    position: relative; /* Allows absolute positioning of children elements */
+}
+
+/* Image box inside content-box for section5 only */
+#section5 .contact-content-image-box {
+    position: absolute; /* Allows positioning of the image box within the content box */
+    top: 8rem; /* Set distance from the top of the content box */
+    left: 45rem; /* Set distance from the left side of the content box */
+    z-index: 1; /* Ensure it appears above other content if necessary */
+    width: 30%; /* Set width of the image box to 30% of its parent */
+    height: auto; /* Maintain aspect ratio of the image box */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Image styles within the contact-content-image-box */
+#section5 .contact-content-image-box img {
+    width: 80%; /* Image fills the width of the box */
+    height: auto; /* Maintain aspect ratio of the image */
+    max-width: 100%; /* Prevent image from overflowing the box */
+    max-height: 100%; /* Prevent image from overflowing the box */
+    border-radius: 15px; /* Optional: Rounds corners of the image */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow effect */
+}
+
+/* 3D shadow effect? */
+
+/*3d shadow effect?*/
+
+/* Default shadow for light mode */
+body.light-theme #section5 .contact-content-image-box img {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.65), /* Main shadow */
+                0 12px 30px rgba(0, 0, 0, 0.4); /* Soft shadow */
+}
+
+/* Shadow for dark mode */
+body.dark-theme #section5 .contact-content-image-box img {
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.0), /* Main shadow */
+                0 4px 20px rgba(255, 255, 255, 0.1); /* Soft shadow */
+}
+
+/* Apply 3D rotation on hover */
+/* Hover effect for the image */
+#section5 .contact-content-image-box img:hover {
+    transform: rotateY(5deg) rotateX(5deg); /* Rotate wrapper for 3D effect */
+}
+
+
+.contact-text-parent-container {
+    position: absolute; /* Allows positioning within the content box */
+    top: 8rem; /* Set distance from the top of the content box */
+    left: 5rem; /* Set distance from the left side of the content box */
+    z-index: 1; /* Ensure it appears above other content if necessary */
+    width: 45%; /* Set width of the text container to 45% of its parent */
+    height: 20%; /* Maintain aspect ratio */
+}
+
+.contact-left-aligned-text {
+    width: 100%; /* Text container fills the width of the parent */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%; /* Prevent text container from overflowing */
+    max-height: 100%; /* Prevent text container from overflowing */
+    text-align: center;
+    font-size: 75px;
+    font-weight: 500;
+
+}
+
+
+
+/* Contact icons */
+
+/* Flexbox container for the column of contact icons */
+.contact-flex-column {
+    display: flex; /* Enable flexbox for layout */
+    flex-direction: column; /* Arrange items in a column */
+    align-items: center; /* Center icons and button horizontally */
+    gap: 40px; /* Adds space between icons and button */
+    margin-top: 100px; /* Adjust the top margin for spacing */
+}
+
+/* Style for the icons */
+.contact-flex-column .icon {
+    width: 50px; /* Set width for each icon */
+    height: 50px; /* Set height for each icon */
+}
+
+/* Style for the icon images */
+.icon-image {
+    max-width: 100%; /* Ensure icon does not exceed its container width */
+    max-height: 100%; /* Ensure icon does not exceed its container height */
+    object-fit: contain; /* Maintain aspect ratio of icon */
+    border-radius: 10px;
+}
+
+/* Style for the button */
+.contact-flex-column .cv-button button {
+    padding: 10px 20px; /* Add padding inside the button */
+    background-color: #007BFF; /* Set button background color */
+    color: white; /* Set text color for the button */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Round corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Set font size for button text */
+}
+
+/* Button hover effect */
+.contact-flex-column .cv-button button:hover {
+    background-color: #0056b3; /* Darker blue background on hover */
+}
+
