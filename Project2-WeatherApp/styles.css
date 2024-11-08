@@ -1,0 +1,191 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('pexels-834934396-20899958.jpg'); /* Set the background image */
+    background-size: cover;                  /* Scale the image to cover the entire element */
+    background-repeat: no-repeat;            /* Prevent the image from tiling */
+    background-position: center;             /* Center the image */
+}
+
+.background-card {
+               /* Responsive width */
+    width: 37.5rem;   /* Maximum width for larger screens */
+    height: 80vh;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center;
+    justify-content: center;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    border: solid 5px #1F1E1F;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
+    background-image: url('default.jpg');  /* Set your default image path */
+    background-size: cover;          /* Ensures the image covers the whole element */
+    background-repeat: no-repeat;    /* Prevents tiling */
+    background-position: center;     /* Centers the image within the element */
+}
+
+.card {
+    width: 29.365rem;
+    height: 75vh;
+    background: rgba(169, 194, 250, 0.8); /* Semi-transparent background */
+    color: #333;
+    border-radius: 1.25rem;
+    padding: 2.5rem 2.1875rem; /* Responsive padding */
+    text-align: center;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+}
+
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the start (left) */
+    margin-left: 0rem; /* Adjust this value to move it left */
+    margin-bottom: 1.25rem; /* Existing margin to create space below the search bar */
+}
+
+.search input {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    color: #555;
+    padding: 0.5rem 1.25rem; /* Responsive padding */
+    height: 3rem;
+    border-radius: 1.5rem;
+    flex: 1;
+    margin-right: 0.5rem;
+    font-size: 1rem; /* Responsive font size */
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background: #ebfffc;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+.search button img {
+    width: 1rem; 
+}
+
+.weather {
+    display: none; /* Hidden by default */
+    padding-top: 1.25rem; /* Added padding to create space above the weather details */
+}
+
+.weather-details {
+    text-align: center;
+}
+
+.weather-details .city {
+    font-size: 1.3rem; /* City name font size */
+    font-weight: bold;
+    max-width: 100%;   /* Prevent text overflow */
+    word-wrap: break-word; /* Handle long text wrapping */
+}
+
+.weather-details .temp {
+    font-size: 1.1rem;  /* Larger size for temperature */
+    font-weight: none;
+}
+
+.weather-icon {
+    aspect-ratio: 1; /* Maintain square aspect ratio */
+    width: 4rem;  /* Responsive width */
+    max-width: 60px; /* Limit max width */
+    margin: 0.5rem auto;
+}
+
+.feels-like {
+    font-size: 0.9rem; 
+    font-weight: bold;
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.humidity, .wind {
+    font-size: 0.875rem; 
+    margin-top: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.humidity i, .wind i {
+    margin-right: 0.25rem;
+}
+
+.error {
+    text-align: left;
+    margin-left: 0.625rem;
+    font-size: 0.875rem;
+    margin-top: 0.625rem;
+    display: none; /* Hidden by default */
+}
+
+.forecast-slider {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    margin-top: 2.5rem;
+    white-space: nowrap; /* Keep forecast items in one line */
+}
+
+.forecast-item {
+    flex: 0 0 auto; /* Maintain fixed width */
+    width: 7rem; /* Fixed width for forecast items */
+    margin-right: 0.25rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.625rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.forecast-item img {
+    aspect-ratio: 1; /* Maintain square aspect ratio */
+    width: 2rem;
+    height: 2rem;
+}
+
+/* Media queries for responsive adjustments */
+@media (max-width: 768px) {
+    .background-card {
+        width: 95%;        /* Full width for smaller devices */
+        height: 75vh;     /* Slightly smaller height */
+    }
+
+    .card {
+        padding: 0.5rem; /* Reduce padding */
+    }
+
+    .search input {
+        font-size: 0.75rem; /* Smaller font size for input */
+    }
+
+    .weather-icon {
+        width: 3rem; /* Smaller weather icon */
+    }
+
+    .feels-like, .humidity, .wind {
+        font-size: 0.75rem; /* Adjust font size for smaller screens */
+    }
+
+    .forecast-item {
+        width: 6rem; /* Adjust forecast item width */
+    }
+}
