@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+    
+<!--Background card?-->
+<div class="background-card">
+
+
+    <div class="converter-container">
+        <h2><span>Currency Converter</span>
+        <span class="icons">
+            <img src="travel.png" alt="Travel">
+            <img src="money(1).png" alt="Money">
+            <img src="earth.png" alt="World">
+        </span>
+        </h2>
+
+        <div class="content">
+            <input 
+                type="number" 
+                placeholder="Enter amount..." class="input-amount"
+            /> 
+
+            <div class="select-container">
+            <div>
+                <select name="" id="from">
+                    <option value="gbp">GBP - U.K. Pound Sterling</option>
+                </select>
+            
+                <select name="" id="to">
+                    <option value="eur">EUR - Euro</option>
+                </select>
+         </div>       
+
+         <div class="swap-btn">
+            <svg 
+                xmlns="http://www.w3.org/2000/svg" fill="none" 
+                viewBox="0 0 24 24" 
+                stroke-width="1.5" stroke="currentColor" 
+                class="size-6"
+            >
+                <path 
+                stroke-linecap="round" stroke-linejoin="round" 
+                d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+            />
+        </svg>
+    </div>
+</div>
+<!--background card div?-->
+</div>
+    <div class="result"><span class="result-currency">EUR </span>00</div>
+    </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
