@@ -1,62 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Specifies document type as HTML5 -->
     <meta charset="UTF-8">
+    <!-- Sets the viewport for responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title displayed on the browser tab -->
     <title>Calculator</title>
+    <!-- Links to external stylesheet for custom styles -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Links to Font Awesome library for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 
+<!-- Calculator container with draggable functionality -->
 <div id="calculator" class="draggable">
+    <!-- Header section containing control buttons -->
     <div class="header">
+        <!-- Minimize button with icon, triggers minimizeCalculator() function -->
         <button onclick="minimizeCalculator()" class="minimize-btn">
             <i class="fas fa-minus"></i>
         </button>
+        <!-- Button to toggle the notepad visibility -->
         <button onclick="toggleNotepad()" class="notepad-btn"> <i class="fas fa-pen"></i></button>
     </div>
+
+    <!-- Display for calculator input and results, read-only to prevent manual entry -->
     <input id="display" readonly>
+
+    <!-- Calculator keys section -->
     <div id="keys">
+        <!-- Operator buttons with corresponding functions for each operation -->
         <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
         <button onclick="clearDisplay()" class="operator-btn">AC</button>
         <button onclick="toggleSign()" class="operator-btn">+/-</button>
         <button onclick="calculatePercentage()" class="operator-btn">%</button>
         <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+
+        <!-- Number buttons to append digits to the display -->
         <button onclick="appendToDisplay('7')">7</button>
         <button onclick="appendToDisplay('8')">8</button>
         <button onclick="appendToDisplay('9')">9</button>
+
+        <!-- Operator button for multiplication -->
         <button onclick="appendToDisplay('*')" class="operator-btn">*</button>
         <button onclick="appendToDisplay('4')">4</button>
         <button onclick="appendToDisplay('5')">5</button>
         <button onclick="appendToDisplay('6')">6</button>
+
+        <!-- Operator button for division -->
         <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
         <button onclick="appendToDisplay('1')">1</button>
         <button onclick="appendToDisplay('2')">2</button>
         <button onclick="appendToDisplay('3')">3</button>
+
+        <!-- Clear entry button to remove the last entry -->
         <button onclick="clearEntry()" class="operator-btn">C</button>
         <button onclick="appendToDisplay('0')">0</button>
         <button onclick="appendToDisplay('.')">.</button>
+
+        <!-- Equals button to compute the result of the entered expression -->
         <button onclick="calculate()" class="operator-btn2">=</button>
     </div>
 </div>
 
+<!-- Notepad section for recording notes -->
 <div class="notepad" id="notepad">
     <textarea id="notepadText" placeholder="Write your notes here..."></textarea>
 </div>
 
-<!-- Minimized calculator icon -->
+<!-- Minimized calculator icon, initially hidden, appears when minimized -->
 <div id="minimized-icon" class="minimized" onclick="restoreCalculator()" style="display: none;">
     <i class="fas fa-calculator"></i>
 </div>
 
+<!-- Sticky note providing user instructions -->
 <div id="sticky-note">
     <button id="close-sticky-note">X</button>
-    <p>Drag and drop the calculator anywhere on the screen!  Use the pencil icon to pop out a note pad if you want to record your calculations.</p>
+    <p>Drag and drop the calculator anywhere on the screen! Use the pencil icon to pop out a note pad if you want to record your calculations.</p>
 </div>
 
-
-
+<!-- Links to external JavaScript file for interactivity -->
 <script src="script.js"></script>
 
 </body>
