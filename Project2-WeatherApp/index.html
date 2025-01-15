@@ -4,29 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Title of the web page displayed in the browser tab -->
     <title>Weather App</title>
+    
+    <!-- Link to external CSS stylesheet for custom styling -->
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Link to Font Awesome for using various icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
+    <!-- Main container for weather card and background design -->
     <div class="background-card">
         <div class="card">
+            <!-- Search bar section for user input -->
             <div class="search">
+                <!-- Input field for entering city name -->
                 <input type="text" placeholder="Enter city name" spellcheck="false">
+                
+                <!-- Button to initiate the search action -->
                 <button><img src="search.png" alt="Search"></button>
             </div>
+            
+            <!-- Error message section for invalid city names -->
             <div class="error">
                 <p>Invalid city name</p>
             </div> 
+            
+            <!-- Weather display section -->
             <div class="weather">
                 <!-- Container for dynamically added weather details -->
                 <div class="weather-details"></div>
             </div>
+            
+            <!-- Slider section for showing future weather forecasts -->
             <div class="forecast-slider">
                 <!-- Forecast items will be dynamically added here -->
             </div>
         </div>
     </div>
+    
+    <!-- Link to external JavaScript file for interactive functionality -->
     <script src="script.js"></script>
 </body>
 </html>
