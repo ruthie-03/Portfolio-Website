@@ -1,12 +1,24 @@
+// Get reference to the element where calculator or notepad will be displayed
 const display = document.getElementById("display");
+
+// Get reference to the calculator container element
 const calculator = document.getElementById('calculator');
+
+// Get reference to the notepad container element
 const notepad = document.getElementById('notepad');
+
+// Get reference to the minimized icon element (used for minimizing/restoring functionality)
 const minimizedIcon = document.getElementById('minimized-icon');
-// Get reference to the notepad textarea
+
+// Get reference to the notepad textarea for user input
 const notepadText = document.getElementById('notepadText');
 
+// Variable to track if the user is currently dragging an element
 let isDragging = false;
+
+// Variables to store the initial click offset when dragging begins
 let offsetX, offsetY;
+
 
 // Dragging functionality
 function startDrag(e) {
