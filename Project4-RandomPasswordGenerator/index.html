@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Page Title -->
     <title>Random Password Generator</title>
+    <!-- Font Awesome Icons for Copy Button -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link to External CSS File -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Main Container for Password Generator -->
     <div class="password-container">
+        <!-- Title -->
         <h2>Random Password Generator</h2>
+        <!-- Input Field to Display Generated Password -->
         <div class="input-container">
             <input type="text" id="input" class="input" placeholder="Create Password" readonly />
+            <!-- Copy Icon (Font Awesome) -->
             <i class="far fa-copy fa-2x"></i>
         </div>
+        <!-- Slider to Select Password Length -->
         <div class="slider-container">
             <label for="length">Length: <span id="length-value">18</span></label>
             <input type="range" id="length" min="8" max="30" value="18">
         </div>
+        <!-- Checkbox Options for Password Criteria -->
         <div class="options">
             <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
             <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
             <label><input type="checkbox" id="numbers" checked> Numbers</label>
             <label><input type="checkbox" id="symbols" checked> Symbols</label>
         </div>
+        <!-- Button to Generate Password -->
         <button class="btn">Generate</button>
+        <!-- Display Password Strength -->
         <div class="strength">Password Strength: <span id="strength">...</span></div>
     </div>
+    <!-- Alert Message for Copy Confirmation -->
     <div class="alert-container active">Password Copied</div>
+    <!-- JavaScript File -->
     <script src="script.js"></script>
 </body>
 </html>
