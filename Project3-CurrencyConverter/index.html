@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title of the web page -->
     <title>Currency Converter</title>
+    <!-- Linking external CSS file for styling -->
     <link rel="stylesheet" href="styles.css">
 </head>
 <body> 
     
-<!--Background card?-->
+<!-- Main background card container -->
 <div class="background-card">
 
-
+    <!-- Currency Converter content container -->
     <div class="converter-container">
         <h2><span>Currency Converter</span>
+        <!-- Icons representing travel, money, and the world -->
         <span class="icons">
             <img src="travel.png" alt="Travel">
             <img src="money(1).png" alt="Money">
@@ -21,43 +24,54 @@
         </span>
         </h2>
 
+        <!-- Input field for entering the amount -->
         <div class="content">
             <input 
                 type="number" 
                 placeholder="Enter amount..." class="input-amount"
             /> 
 
+            <!-- Currency selection dropdowns -->
             <div class="select-container">
             <div>
+                <!-- Dropdown for selecting 'From' currency -->
                 <select name="" id="from">
                     <option value="gbp">GBP - U.K. Pound Sterling</option>
                 </select>
-            
+
+                <!-- Dropdown for selecting 'To' currency -->
                 <select name="" id="to">
                     <option value="eur">EUR - Euro</option>
                 </select>
          </div>       
 
+        <!-- Button to swap currency selections -->
          <div class="swap-btn">
-            <svg 
-                xmlns="http://www.w3.org/2000/svg" fill="none" 
-                viewBox="0 0 24 24" 
-                stroke-width="1.5" stroke="currentColor" 
-                class="size-6"
+            <!-- SVG (Scalable Vector Graphics) element representing an icon -->
+              <svg 
+            xmlns="http://www.w3.org/2000/svg"  <!-- Declares the XML namespace for SVG -->
+            fill="none"  <!-- No fill color inside the shape, keeping it transparent -->
+            viewBox="0 0 24 24"  <!-- Defines the coordinate system of the SVG, width and height set to 24x24 -->
+            stroke-width="1.5"  <!-- Sets the thickness of the stroke (outline) -->
+            stroke="currentColor"  <!-- Uses the current text color as the stroke color -->
+            class="size-6"  <!-- CSS class for styling -->
             >
+            <!-- Path element defining the actual shape of the icon -->
                 <path 
-                stroke-linecap="round" stroke-linejoin="round" 
-                d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
-            />
-        </svg>
+            stroke-linecap="round"  <!-- Makes the line ends rounded -->
+            stroke-linejoin="round"  <!-- Makes the line corners rounded -->
+            d="M3 7.5 7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+            <!-- The 'd' attribute defines the path's movement using coordinates -->
+    />
+</svg>
+    </div>
     </div>
 </div>
-<!--background card div?-->
-</div>
+    <!-- Display area for converted currency result -->
     <div class="result"><span class="result-currency">EUR </span>00</div>
     </div>
 </div>
-
+    <!-- Linking external JavaScript file for functionality -->
     <script src="script.js"></script>
 </body>
 </html>
