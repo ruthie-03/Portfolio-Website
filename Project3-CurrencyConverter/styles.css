@@ -1,33 +1,38 @@
+/* Style the body to take the full viewport height and center content */
 body {
-    height: 100vh;
-    margin: 0;
-    display: grid;
-    place-items: center;
-    background-image: url('pexels-hngstrm-2341290.jpg'); /* Set the background image */
-    background-size: cover;                  /* Scale the image to cover the entire element */
-    background-repeat: no-repeat;            /* Prevent the image from tiling */
-    background-position: center;             /* Center the image */
+    height: 100vh; /* Set height to full viewport */
+    margin: 0; /* Remove default margin */
+    display: grid; /* Use CSS Grid for centering */
+    place-items: center; /* Center content horizontally & vertically */
+    /* Set the background image */
+    background-image: url('pexels-hngstrm-2341290.jpg'); /* Background image */
+    background-size: cover; /* Scale the image to cover the entire element */
+    background-repeat: no-repeat; /* Prevent the image from tiling */
+    background-position: center; /* Center the image */
 }
 
+/* Main container for the currency converter */
 .converter-container {
-    max-width:  500px;
-    background: #f5f5f8;
-    box-shadow: 0 8px 50px -8px rgba(0, 0, 0, 0.3);
-    padding: 16px;
-    border-radius: 8px;
-    font-family: "Roboto", sans-serif;
-    font-style: italic;
-    font-weight: bolder;
+    max-width:  500px; /* Set the max width in fixed values */
+    background: #f5f5f8; /* Light background color */
+    box-shadow: 0 8px 50px -8px rgba(0, 0, 0, 0.3); /* Added shadow effect */
+    padding: 16px; /* Add space inside */
+    border-radius: 8px; /* Rounded corners */
+    font-family: "Roboto", sans-serif; /* Font style */
+    font-style: italic; /* Italicize text */
+    font-weight: bolder; /* Styling text to be bolder */
 }
 
+/* Styling for the heading */
 .converter-container h2 {
-    margin: 0;
-    margin-bottom: 30px;
-    font-size: 30px;
-    font-weight: normal;
-    position: relative;
+    margin: 0; /* Remove default margin */
+    margin-bottom: 30px; /* Add spacing below */
+    font-size: 30px; /* Set font size */
+    font-weight: normal; /* Normal font weight */
+    position: relative; /* Relative positioning for ::after */
 }
 
+/* Add an underline effect below the heading */
 .converter-container h2::after {
     position: absolute;
     content: "";
@@ -35,105 +40,115 @@ body {
     width: 100%;
     left: 0;
     bottom: -6px;
-    background: #000000;
+    background: #000000; /* Black underline */
+}
 }
 
+/* Content section inside the converter */
 .converter-container .content {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Arrange items vertically */
+    gap: 8px; /* Add space between elements */
 }
 
+/* Styling for input fields and select dropdowns */
 .converter-container input,
 .converter-container select {
-    padding: 8px 16px;
+    padding: 8px 16px; /* Add padding */
     font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    border-radius: 8px;
-    border: 1px solid #2d2069;
-    appearance: none;
+    font-size: 16px; /* Set font size */
+    border-radius: 8px; /* Rounded corners */
+    border: 1px solid #2d2069; /* Set border color */
+    appearance: none; /* Remove default styles */
 }
 
+/* Styling for the amount input field */
 .converter-container input {
-    font-size: 30px;
-    font-weight: bold;
-    padding: 12px 16px;
+    font-size: 30px; /* Increase font size */
+    font-weight: bold; /* Make font bold */
+    padding: 12px 16px; /* Add padding */
 }
 
+/* Container for currency dropdowns */
 .converter-container .select-container {
-    display: flex;
-    gap: 8px;
+    display: flex; /* Use flexbox */
+    gap: 8px; /* Space between dropdowns */
 }
 
+/* Ensure select elements take full width */
 .converter-container .select-container select {
-    width: 100%;
-    margin-block: 4px;
+    width: 100%; /* Make them responsive */
+    margin-block: 4px; /* Add spacing */
 }
 
+/* Swap button styling */
 .converter-container .swap-btn {
-    width: 30px;
-    border: 1px solid #1d3461;
-    padding: 8px;
-    cursor: pointer;
-    display: flex;
-    border-radius: 8px;
-    margin-bottom: 2px;
+    width: 30px; /* Set button width */
+    border: 1px solid #1d3461; /* Add border */
+    padding: 8px; /* Add padding */
+    cursor: pointer; /* Change cursor to pointer */
+    display: flex; /* Flex display */
+    border-radius: 8px; /* Rounded corners */
+    margin-bottom: 2px; /* Add spacing */
 }
 
+/* Styling for the result display */
 .converter-container .result {
-    font-size: 40px; 
-    font-weight: bold;
-    text-align: center;
-    padding-block: 16px;
-    background: #1d3461;
-    color: #fff;
-    border-radius: 8px; 
+    font-size: 40px; /* Large font size */ 
+    font-weight: bold; /* Bold text */
+    text-align: center; /* Center align */
+    padding-block: 16px; /* Vertical padding */
+    background: #1d3461; /* Dark blue background */
+    color: #fff; /* White text */
+    border-radius: 8px; /* Rounded corners */
 }
 
+/* Styling for the currency code inside the result display */
 .converter-container .result-currency {
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 24px; /* Adjust font size */
+    text-transform: uppercase; /* Convert text to uppercase */
 }
 
-/*arrow for drop down?*/
-
+/* Remove default dropdown arrow and add a custom one */
 #from, #to {
     appearance: none; /* Remove default arrow */
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    -webkit-appearance: none; /* Remove default styling in WebKit browsers */
+    -moz-appearance: none; /* Remove default styling in Firefox */
+    /* Adds the custom dropdown arrow image */
     background: url('down-arrow.png') no-repeat right center;
-    padding-right: 20px; /* Adjust padding to make space for the icon */
-    background-size: 30px; /* Adjust size of the icon */
+    padding-right: 20px; /* Space for the icon */
+    background-size: 30px; /* Resize the icon */
 }
 
-/*header icons?*/
-
+/* Styling for the heading and its icons */
 h2 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space out elements *
+    align-items: center; /* Align items vertically */
 }
 
+/* Container for the icons next to the heading */
 .icons {
-    display: flex;
+    display: flex; /* Use flexbox */
     gap: 10px; /* Adjust the gap between icons */
 }
 
+/* Styling for the icons */
 .icons img {
     width: 52px; /* Adjust the size of the icons */
     height: 52px; /* Adjust the size of the icons */
     cursor: pointer; /* Change cursor to pointer on hover */
 }
 
-/*background card?*/
 
+/* Styling for the background card */
 .background-card {
-    background-image: url('FreeVector-Digital-World-Map.jpg'); /* Path to your background image */
-    background-size: cover;
-    background-position: center;
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 10px; /* Optional: for rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.823); /* Optional: for a subtle shadow effect */
-    max-width: 600px; /* Adjust width as needed */
-    margin: 0 auto; /* Center the card horizontally */
+    background-image: url('FreeVector-Digital-World-Map.jpg'); /* Path to the background image */
+    background-size: cover; /* Scale image to cover element */
+    background-position: center; /* Center the background */
+    padding: 20px; /* Adjusts padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.823); /* Subtle shadow effect */
+    max-width: 600px; /* Adjusted width */
+    margin: 0 auto; /* Centres the card horizontally */
 }
