@@ -13,10 +13,7 @@ const searchBox = document.querySelector(".search input");
 // Select the button for triggering the search action
 const searchBtn = document.querySelector(".search button");
 
-/**
- * Fetch and display weather information for the specified city
- * @param {string} city - The name of the city to fetch weather data for
- */
+//Fetch and display weather information for the specified city
 async function checkWeather(city) {
     try {
         // Fetch current weather data from the API
