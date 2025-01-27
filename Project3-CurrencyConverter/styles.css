@@ -143,7 +143,7 @@ h2 {
 
 /* Styling for the background card */
 .background-card {
-    background-image: url('FreeVector-Digital-World-Map.jpg'); /* Path to the background image */
+    background-image: url('Icons and Images/FreeVector-Digital-World-Map.jpg'); /* Path to the background image */
     background-size: cover; /* Scale image to cover element */
     background-position: center; /* Center the background */
     padding: 20px; /* Adjusts padding */
