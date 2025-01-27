@@ -176,7 +176,7 @@ function updateBackground(weatherId) {
         backgroundCard.style.backgroundImage = "url('images/cloudyclouds.jpg')";
     // Default case: If no specific weather condition is matched, set a default background
     } else {
-        backgroundCard.style.backgroundImage = "url('default.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/default.jpg')";
     }
 }
 
