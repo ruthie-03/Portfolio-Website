@@ -994,8 +994,8 @@ body.dark-theme #section5 .contact-content-image-box img {
 
 .contact-text-parent-container {
     position: absolute; /* Allows positioning within the content box */
-    top: 8rem; /* Set distance from the top of the content box */
-    left: 5rem; /* Set distance from the left side of the content box */
+    top: -18rem; /* Set distance from the top of the content box */
+    left: -15rem; /* Set distance from the left side of the content box */
     z-index: 1; /* Ensure it appears above other content if necessary */
     width: 45%; /* Set width of the text container to 45% of its parent */
     height: 20%; /* Maintain aspect ratio */
