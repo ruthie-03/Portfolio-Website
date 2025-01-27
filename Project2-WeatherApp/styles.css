@@ -28,7 +28,7 @@ body, html {
     overflow: hidden;
     border: solid 5px #1F1E1F;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.1);
-    background-image: url('default.jpg');  /* Set your default image path */
+    background-image: url('images/default.jpg');  /* Background card background image path */
     background-size: cover;          /* Ensures the image covers the whole element */
     background-repeat: no-repeat;    /* Prevents tiling */
     background-position: center;     /* Centers the image within the element */
