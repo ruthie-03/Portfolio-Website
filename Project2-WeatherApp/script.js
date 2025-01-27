@@ -155,25 +155,25 @@ function updateBackground(weatherId) {
 // Check the weather ID range and update the background image accordingly
     // Thunderstorm: Weather ID between 200 and 299
     if (weatherId >= 200 && weatherId < 300) {
-        backgroundCard.style.backgroundImage = "url('thunderstorm.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/thunderstorm.jpg')";
     // Drizzle: Weather ID between 300 and 399
     } else if (weatherId >= 300 && weatherId < 400) {
-        backgroundCard.style.backgroundImage = "url('drizzle.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/drizzle.jpg')";
     // Rain: Weather ID between 500 and 599
     } else if (weatherId >= 500 && weatherId < 600) {
-        backgroundCard.style.backgroundImage = "url('rain-desktop.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/rain-desktop.jpg')";
     // Snow: Weather ID between 600 and 699
     } else if (weatherId >= 600 && weatherId < 700) {
-        backgroundCard.style.backgroundImage = "url('snow.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/snow.jpg')";
     // Atmosphere (e.g., fog, mist): Weather ID between 700 and 799
     } else if (weatherId >= 700 && weatherId < 800) {
-        backgroundCard.style.backgroundImage = "url('atmosphere.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/atmosphere.jpg')";
     // Clear sky: Weather ID exactly 800
     } else if (weatherId === 800) {
-        backgroundCard.style.backgroundImage = "url('sun-flare.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/sun-flare.jpg')";
     // Clouds: Weather ID between 801 and 899
     } else if (weatherId > 800 && weatherId < 900) {
-        backgroundCard.style.backgroundImage = "url('cloudyclouds.jpg')";
+        backgroundCard.style.backgroundImage = "url('images/cloudyclouds.jpg')";
     // Default case: If no specific weather condition is matched, set a default background
     } else {
         backgroundCard.style.backgroundImage = "url('default.jpg')";
