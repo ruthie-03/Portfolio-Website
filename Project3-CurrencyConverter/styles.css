@@ -5,7 +5,7 @@ body {
     display: grid; /* Use CSS Grid for centering */
     place-items: center; /* Center content horizontally & vertically */
     /* Set the background image */
-    background-image: url('pexels-hngstrm-2341290.jpg'); /* Background image */
+    background-image: url('Icons and Images/pexels-hngstrm-2341290.jpg'); /* Background image */
     background-size: cover; /* Scale the image to cover the entire element */
     background-repeat: no-repeat; /* Prevent the image from tiling */
     background-position: center; /* Center the image */
@@ -115,7 +115,7 @@ body {
     -webkit-appearance: none; /* Remove default styling in WebKit browsers */
     -moz-appearance: none; /* Remove default styling in Firefox */
     /* Adds the custom dropdown arrow image */
-    background: url('down-arrow.png') no-repeat right center;
+    background: url('Icons and Images/down-arrow.png') no-repeat right center;
     padding-right: 20px; /* Space for the icon */
     background-size: 30px; /* Resize the icon */
 }
