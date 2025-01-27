@@ -4,7 +4,7 @@ body, html {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('pexels-eva-bronzini-7598250.jpg'); /* Set the background image */
+    background-image: url('images/pexels-eva-bronzini-7598250.jpg'); /* Set the background image */
     background-size: cover;                  /* Scale the image to cover the entire element */
     background-repeat: no-repeat;            /* Prevent the image from tiling */
     background-position: center;             /* Center the image */
