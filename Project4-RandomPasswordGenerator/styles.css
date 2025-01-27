@@ -6,7 +6,7 @@ body {
   align-items: center;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('pexels-jeremy-bishop-1260133-15539377.jpg'); /* Set the background image */
+  background-image: url('images/pexels-jeremy-bishop-1260133-15539377.jpg'); /* Set the background image */
   background-size: cover;                  /* Scale the image to cover the entire element */
   background-repeat: no-repeat;            /* Prevent the image from tiling */
   background-position: center;             /* Center the image */
