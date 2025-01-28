@@ -1036,7 +1036,7 @@ body.dark-theme #section5 .contact-content-image-box img {
 }
 
 /* Style for the button */
-.contact-flex-column .cv-button button {
+.icon-links .contact-flex-column .cv-button button {
     padding: 10px 20px; /* Add padding inside the button */
     background-color: #007BFF; /* Set button background color */
     color: white; /* Set text color for the button */
