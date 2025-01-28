@@ -1047,7 +1047,7 @@ body.dark-theme #section5 .contact-content-image-box img {
 }
 
 /* Button hover effect */
-.contact-flex-column .cv-button button:hover {
+.icon-links .contact-flex-column .cv-button button:hover {
     background-color: #0056b3; /* Darker blue background on hover */
 }
 
